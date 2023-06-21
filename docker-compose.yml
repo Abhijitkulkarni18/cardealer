@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  web:
+    # Build the Docker image using the current directory as the build context
+    build: .
+
+    # Map port 8000 on the host to port 8000 in the container
+    ports:
+      - 8000:8000
+
+    # Mount the current directory to /usr/src/app inside the container
+    volumes:
+      - ./:/usr/src/app
